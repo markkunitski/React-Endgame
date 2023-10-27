@@ -43,7 +43,7 @@ function Posts() {
 	}
 	useObserver(lastElem, page < totalPages, isLoading, () => setPage(page + 1))
 	return <div className='App'>
-		<MyBtn style={{ marginTop: '30px' }} onClick={() => setModal(true)} >Создать пост</MyBtn>
+		<MyBtn style={{ marginTop: '30px' }} onClick={() => setModal(true)} >Create post</MyBtn>
 		<MyModal visible={modal} setVisible={setModal}><PostForm create={createPost}></PostForm></MyModal>
 		<PostFilter
 			filter={filter}
@@ -52,7 +52,7 @@ function Posts() {
 		<MySelect
 		value={limit}
 		onChange={value => setLimit(value)}
-		defaultValue='Кол-во на странице'
+		defaultValue='Ammount on the page'
 		options={[
 			{value: 5, name: '5'},
 			{value: 10, name: '10'},
@@ -60,8 +60,8 @@ function Posts() {
 			{value: -1, name: 'Все'}
 		]}
 		></MySelect>
-		{postError && <h1>Произошла ошибка ${postError}</h1>}
-		<PostList remove={removePost} posts={sortedAndSearch} title={'Посты про JS'}></PostList>
+		{postError && <h1>Error accured ${postError}</h1>}
+		<PostList remove={removePost} posts={sortedAndSearch} title={'Posts about JS'}></PostList>
 		<div ref={lastElem} style={{ background: 'transparent', height: '10px' }}></div>
 		{isLoading && <div style={{ display: 'flex', justifyContent: 'center', marginTop: '200px' }}><MyLoading></MyLoading></div>}
 		<MyPagination page={page} changePost={changePost} totalPages={totalPages}></MyPagination>

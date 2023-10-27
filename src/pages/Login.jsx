@@ -12,10 +12,10 @@ const Login = () => {
      }
     return (
     <div>
-        <h1>Страница для входа</h1>
+        <h1>Log in page</h1>
         <form onSubmit={Login} action="">
-        <MyInput placeholder={'Введите логин'}></MyInput>
-        <MyInput autoComplete='user-password' type='password' placeholder={'Введите пароль'}></MyInput>
+        <MyInput placeholder={'Login'}></MyInput>
+        <MyInput autoComplete='user-password' type='password' placeholder={'Password'}></MyInput>
         <MyBtn>Войти</MyBtn>
         </form>
     </div>

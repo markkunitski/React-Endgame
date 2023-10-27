@@ -15,8 +15,8 @@ function PostItem(props) {
 				<div>{props.post.body}</div>
 			</div>
 			<div className='post__btns'>
-				<MyBtn onClick={() => handleClick(props.post.id)}>Открыть</MyBtn>
-				<MyBtn onClick={() => props.remove(props.post)}>Удалить</MyBtn>
+				<MyBtn onClick={() => handleClick(props.post.id)}>Open</MyBtn>
+				<MyBtn onClick={() => props.remove(props.post)}>Delete</MyBtn>
 
 			</div>
 		</div>

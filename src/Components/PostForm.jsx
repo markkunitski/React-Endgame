@@ -15,12 +15,12 @@ const PostForm = ({ create }) => {
     return (
         <form action="">
             <MyInput
-                value={post.title} onChange={e => setPost({ ...post, title: e.target.value })} placeholder='Название'
+                value={post.title} onChange={e => setPost({ ...post, title: e.target.value })} placeholder='Name'
             />
             <MyInput
-                value={post.body} onChange={e => setPost({ ...post, body: e.target.value })} placeholder='Описание'
+                value={post.body} onChange={e => setPost({ ...post, body: e.target.value })} placeholder='Description'
             />
-            <MyBtn onClick={addPost}>СОЗДАТЬ</MyBtn>
+            <MyBtn onClick={addPost}>CREATE</MyBtn>
         </form>
     )
 }

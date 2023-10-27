@@ -16,12 +16,12 @@ const PostIdPage = () => {
         fetchingPostById(params.id)
     }, [])
     return (<>
-        <h1>postid страницы {params.id}</h1>
+        <h1>POSTID of the page: {params.id}</h1>
         {isLoading
             ? <div style={{ display: 'flex', justifyContent: 'center', marginTop: '50px' }}><MyLoading></MyLoading></div>
             : <div>{post.id}. {post.title}</div>
         }
-        <h1 style={{ margin: '40px' }}>Комментарии</h1>
+        <h1 style={{ margin: '40px' }}>Comments</h1>
         <Comments params={params}></Comments>
     </>
     )
