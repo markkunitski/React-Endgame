@@ -4,8 +4,7 @@ const About = () => {
   return (
     <>
       <h3>
-        Hope u love this project! Tried to make react endgame project with all
-        basics of technology :)
+        Hope u love this project! Tried to make react showcase <br /> project with all the best modern react can offer :)
       </h3>
       <ol>
         <li>Infinite scroll</li>

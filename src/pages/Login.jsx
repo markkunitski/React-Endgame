@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import MyInput from '../Components/UI/input/MyInput'
 import MyBtn from '../Components/UI/button/MyBtn'
 import { AuthContext } from '../context/AuthContext'
+import About from '../pages/About'
 
 const Login = () => {
     const {isAuth, setIsAuth}= useContext(AuthContext)
@@ -12,12 +13,13 @@ const Login = () => {
      }
     return (
     <div>
-        <h1>Log in page</h1>
+        <h1>Press log in to enter</h1>
         <form onSubmit={Login} action="">
-        <MyInput placeholder={'Login'}></MyInput>
-        <MyInput autoComplete='user-password' type='password' placeholder={'Password'}></MyInput>
-        <MyBtn>Войти</MyBtn>
+        <MyInput placeholder={'Login (BLANK OR ANY TEXT)'}></MyInput>
+        <MyInput autoComplete='user-password' type='password' placeholder={'Password (BLANK OR ANY TEXT)'}></MyInput>
+        <MyBtn>Log in!</MyBtn>
         </form>
+        <About></About>
     </div>
   )
 }
